@@ -1,0 +1,704 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="世界无烟日专题页面，提供吸烟危害科普、戒烟方法指南、二手烟防护知识及健康生活方式建议，致力于帮助公众远离烟草，拥抱健康生活。">
+    <meta name="keywords" content="世界无烟日主题,戒烟方法,吸烟危害,二手烟防护,健康生活">
+    <title>世界无烟日主题 - 呼吸健康科普与戒烟指南</title>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #2e7d32;
+            --primary-light: #e8f5e9;
+            --accent-color: #ff6f00;
+            --text-main: #333333;
+            --text-secondary: #666666;
+            --bg-body: #f9f9f9;
+            --bg-white: #ffffff;
+            --spacing-unit: 1rem;
+            --border-radius: 8px;
+            --shadow-sm: 0 2px 4px rgba(0,0,0,0.05);
+            --shadow-md: 0 4px 12px rgba(0,0,0,0.08);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+            line-height: 1.6;
+            color: var(--text-main);
+            background-color: var(--bg-body);
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.2s;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* Header */
+        header {
+            background-color: var(--bg-white);
+            box-shadow: var(--shadow-sm);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .header-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            font-weight: 500;
+            color: var(--text-secondary);
+        }
+
+        .nav-links a:hover {
+            color: var(--primary-color);
+        }
+
+        .cta-btn {
+            background-color: var(--accent-color);
+            color: white;
+            padding: 0.5rem 1.2rem;
+            border-radius: 50px;
+            font-weight: 600;
+        }
+
+        .cta-btn:hover {
+            background-color: #e65100;
+            color: white;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--primary-color) 0%, #1b5e20 100%);
+            color: white;
+            padding: 5rem 2rem;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto 2rem;
+            opacity: 0.9;
+        }
+
+        .hero-stats {
+            display: flex;
+            justify-content: center;
+            gap: 3rem;
+            margin-top: 3rem;
+            flex-wrap: wrap;
+        }
+
+        .stat-item h3 {
+            font-size: 2rem;
+            font-weight: 700;
+        }
+
+        .stat-item p {
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+
+        /* Main Container */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+        }
+
+        /* Section Styling */
+        .section-title {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .section-title h2 {
+            font-size: 2rem;
+            color: var(--text-main);
+            margin-bottom: 0.5rem;
+        }
+
+        .section-title p {
+            color: var(--text-secondary);
+        }
+
+        /* Cards Grid */
+        .grid-3 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .card {
+            background: var(--bg-white);
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow-sm);
+            padding: 2rem;
+            transition: transform 0.3s, box-shadow 0.3s;
+            border-top: 4px solid transparent;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-md);
+            border-top-color: var(--primary-color);
+        }
+
+        .card-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        .card h3 {
+            margin-bottom: 1rem;
+            font-size: 1.25rem;
+        }
+
+        .card p {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+        }
+
+        /* Causes List */
+        .causes-list {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .cause-item {
+            display: flex;
+            gap: 1.5rem;
+            align-items: flex-start;
+            background: var(--bg-white);
+            padding: 1.5rem;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow-sm);
+        }
+
+        .cause-number {
+            background-color: var(--primary-light);
+            color: var(--primary-color);
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            flex-shrink: 0;
+        }
+
+        .cause-content h3 {
+            margin-bottom: 0.5rem;
+        }
+
+        /* Interactive Calculator */
+        .calculator-section {
+            background-color: var(--bg-white);
+            border-radius: var(--border-radius);
+            padding: 3rem;
+            box-shadow: var(--shadow-md);
+            margin-bottom: 4rem;
+        }
+
+        .calc-header {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .calc-form {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+        }
+
+        .form-group select, .form-group input {
+            width: 100%;
+            padding: 0.8rem;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 1rem;
+        }
+
+        .calc-result {
+            margin-top: 2rem;
+            padding: 1.5rem;
+            background-color: var(--primary-light);
+            border-radius: var(--border-radius);
+            text-align: center;
+            display: none;
+        }
+
+        .calc-result h3 {
+            color: var(--primary-color);
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .calc-result p {
+            color: var(--text-main);
+        }
+
+        /* Comparison Table */
+        .table-wrapper {
+            overflow-x: auto;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background: var(--bg-white);
+            box-shadow: var(--shadow-sm);
+            border-radius: var(--border-radius);
+            overflow: hidden;
+        }
+
+        th, td {
+            padding: 1rem;
+            text-align: left;
+            border-bottom: 1px solid #eee;
+        }
+
+        th {
+            background-color: var(--primary-color);
+            color: white;
+            font-weight: 600;
+        }
+
+        tr:last-child td {
+            border-bottom: none;
+        }
+
+        /* FAQ Section */
+        .faq-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1rem;
+        }
+
+        details {
+            background: var(--bg-white);
+            border-radius: var(--border-radius);
+            padding: 1rem;
+            box-shadow: var(--shadow-sm);
+            cursor: pointer;
+        }
+
+        summary {
+            font-weight: 600;
+            list-style: none;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        summary::after {
+            content: '+';
+            font-size: 1.5rem;
+            color: var(--primary-color);
+        }
+
+        details[open] summary::after {
+            content: '-';
+        }
+
+        details p {
+            margin-top: 1rem;
+            color: var(--text-secondary);
+            padding-top: 1rem;
+            border-top: 1px solid #eee;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #263238;
+            color: #eceff1;
+            padding: 4rem 2rem 2rem;
+            margin-top: 4rem;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 3rem;
+        }
+
+        .footer-col h4 {
+            margin-bottom: 1.5rem;
+            font-size: 1.2rem;
+            color: white;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 0.8rem;
+        }
+
+        .footer-col ul li a {
+            color: #b0bec5;
+        }
+
+        .footer-col ul li a:hover {
+            color: white;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            margin-top: 3rem;
+            padding-top: 2rem;
+            border-top: 1px solid #37474f;
+            color: #90a4ae;
+            font-size: 0.9rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none; /* Simplified for mobile */
+            }
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+            .hero-stats {
+                gap: 1.5rem;
+            }
+            .cause-item {
+                flex-direction: column;
+                text-align: center;
+            }
+            .cause-number {
+                margin: 0 auto;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <span>🌿</span> 无烟健康
+            </div>
+            <nav class="nav-links">
+                <a href="#harm">吸烟危害</a>
+                <a href="#quit">科学戒烟</a>
+                <a href="#secondhand">二手烟防护</a>
+                <a href="#faq">常见问题</a>
+            </nav>
+            <a href="#calculator" class="cta-btn">戒烟计算器</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <h1>世界无烟日：还肺部一片清新</h1>
+            <p>每年的5月31日是世界卫生组织发起的世界无烟日。烟草烟雾中含有7000多种化合物，其中数百种为有毒有害物质，至少69种为致癌物。</p>
+            <div class="hero-stats">
+                <div class="stat-item">
+                    <h3>8.6亿</h3>
+                    <p>中国吸烟者人数</p>
+                </div>
+                <div class="stat-item">
+                    <h3>100万</h3>
+                    <p>因吸烟导致的死亡人数</p>
+                </div>
+                <div class="stat-item">
+                    <h3>7.4亿</h3>
+                    <p>遭受二手烟危害的国人</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Harm Section -->
+        <section id="harm" class="container">
+            <div class="section-title">
+                <h2>吸烟对身体的危害</h2>
+                <p>吸烟不仅损害吸烟者自身的健康，二手烟还会对周围的人造成严重伤害。</p>
+            </div>
+
+            <div class="causes-list">
+                <article class="cause-item">
+                    <div class="cause-number">1</div>
+                    <div class="cause-content">
+                        <h3>呼吸系统疾病</h3>
+                        <p>吸烟是慢性阻塞性肺疾病（COPD）、慢性支气管炎和肺气肿的主要诱因。长期吸烟会导致肺功能下降，呼吸困难。</p>
+                    </div>
+                </article>
+
+                <article class="cause-item">
+                    <div class="cause-number">2</div>
+                    <div class="cause-content">
+                        <h3>心血管系统风险</h3>
+                        <p>烟草中的尼古丁会收缩血管，增加心脏负担，显著提高患冠心病、中风（脑卒中）和周围动脉疾病的风险。</p>
+                    </div>
+                </article>
+
+                <article class="cause-item">
+                    <div class="cause-number">3</div>
+                    <div class="cause-content">
+                        <h3>致癌风险增加</h3>
+                        <p>吸烟是导致肺癌的首要原因，同时也与喉癌、口腔癌、食道癌、胃癌、胰腺癌等多种癌症密切相关。</p>
+                    </div>
+                </article>
+
+                <article class="cause-item">
+                    <div class="cause-number">4</div>
+                    <div class="cause-content">
+                        <h3>生殖健康影响</h3>
+                        <p>吸烟会降低男性精子质量，增加女性流产、早产和胎儿发育不良的风险。戒烟可显著改善生殖健康。</p>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- Calculator Section -->
+        <section id="calculator" class="container">
+            <div class="calculator-section">
+                <div class="calc-header">
+                    <h2>戒烟收益计算器</h2>
+                    <p>计算如果您现在戒烟，未来将节省多少开支并延长多少寿命。</p>
+                </div>
+                <form class="calc-form" onsubmit="calculateBenefits(event)">
+                    <div class="form-group">
+                        <label for="cigsPerDay">每天吸烟数量（支）</label>
+                        <input type="number" id="cigsPerDay" value="10" min="1" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="pricePerPack">单包烟价格（元）</label>
+                        <input type="number" id="pricePerPack" value="20" min="1" step="0.5" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="yearsToQuit">预计戒烟年限（年）</label>
+                        <input type="number" id="yearsToQuit" value="10" min="1" required>
+                    </div>
+                    <button type="submit" class="cta-btn" style="width: 100%; border: none; cursor: pointer;">开始计算</button>
+                </form>
+                <div id="result" class="calc-result">
+                    <h3>🎉 戒烟后的您</h3>
+                    <p id="savingsText"></p>
+                    <p id="lifeText"></p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Comparison Section -->
+        <section id="quit" class="container">
+            <div class="section-title">
+                <h2>科学戒烟指南</h2>
+                <p>戒烟越早越好，任何年龄戒烟都有益健康。</p>
+            </div>
+            <div class="grid-3">
+                <div class="card">
+                    <span class="card-icon">🧠</span>
+                    <h3>心理准备</h3>
+                    <p>明确戒烟动机，建立戒烟的决心。了解戒断反应是正常的生理现象，不要因此放弃。</p>
+                </div>
+                <div class="card">
+                    <span class="card-icon">💊</span>
+                    <h3>辅助治疗</h3>
+                    <p>咨询医生，使用尼古丁替代疗法（如贴片、口香糖）或处方药物，降低戒烟成功率。</p>
+                </div>
+                <div class="card">
+                    <span class="card-icon">🏃</span>
+                    <h3>行为替代</h3>
+                    <p>寻找替代品，如口香糖、坚果等。当想吸烟时，通过运动、深呼吸或喝水来转移注意力。</p>
+                </div>
+            </div>
+
+            <div class="section-title" style="margin-top: 4rem;">
+                <h3>戒烟前后对比</h3>
+            </div>
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>身体指标</th>
+                            <th>吸烟状态</th>
+                            <th>戒烟20分钟后</th>
+                            <th>戒烟1年后</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>心率</td>
+                            <td>升高</td>
+                            <td>恢复正常</td>
+                            <td>接近正常</td>
+                        </tr>
+                        <tr>
+                            <td>血液中一氧化碳</td>
+                            <td>高</td>
+                            <td>下降一半</td>
+                            <td>接近正常</td>
+                        </tr>
+                        <tr>
+                            <td>患肺癌风险</td>
+                            <td>高</td>
+                            <td>无明显变化</td>
+                            <td>下降约50%</td>
+                        </tr>
+                        <tr>
+                            <td>心脏病风险</td>
+                            <td>高</td>
+                            <td>无明显变化</td>
+                            <td>下降约50%</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- Secondhand Smoke Section -->
+        <section id="secondhand" class="container" style="background-color: var(--primary-light); border-radius: var(--border-radius); padding: 3rem;">
+            <div class="section-title">
+                <h2>拒绝二手烟，保护家人</h2>
+                <p>二手烟没有安全水平，室内完全禁止吸烟是保护健康的唯一有效方法。</p>
+            </div>
+            <div class="grid-3">
+                <div class="card" style="border-top-color: var(--accent-color);">
+                    <h3>🏠 室内禁烟</h3>
+                    <p>为了家人的健康，请务必在室内（包括家中、车内）完全禁止吸烟。</p>
+                </div>
+                <div class="card" style="border-top-color: var(--accent-color);">
+                    <h3>👶 儿童保护</h3>
+                    <p>儿童对烟雾更为敏感，二手烟会导致儿童哮喘、中耳炎和呼吸道感染。</p>
+                </div>
+                <div class="card" style="border-top-color: var(--accent-color);">
+                    <h3>🤰 孕期防护</h3>
+                    <p>孕妇接触二手烟会增加早产、低出生体重和婴儿猝死综合征的风险。</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section id="faq" class="container">
+            <div class="section-title">
+                <h2>常见问题解答</h2>
+            </div>
+            <div class="faq-grid">
+                <details>
+                    <summary>戒烟后会有哪些戒断症状？</summary>
+                    <p>戒烟后常见的戒断症状包括焦虑、易怒、失眠、注意力不集中和强烈的吸烟渴望。这些症状通常在戒烟后几周内达到高峰，并会在1-3个月内逐渐减弱。</p>
+                </details>
+                <details>
+                    <summary>如何应对戒烟时的“烟瘾发作”？</summary>
+                    <p>当烟瘾发作时，尝试深呼吸、喝一大杯水、咀嚼无糖口香糖或进行短暂的散步。告诉自己这种渴望通常只持续几分钟，忍过去就好了。</p>
+                </details>
+                <details>
+                    <summary>电子烟可以用来戒烟吗？</summary>
+                    <p>目前世界卫生组织（WHO）不建议使用电子烟作为戒烟手段。虽然电子烟不含焦油，但其中的尼古丁仍具有成瘾性，且长期健康影响尚不明确。</p>
+                </details>
+                <details>
+                    <summary>偶尔吸一支烟会影响戒烟成果吗？</summary>
+                    <p>偶尔吸一支烟通常不会导致复吸，但可能会降低您的意志力。最关键的是保持决心，避免再次形成习惯。</p>
+                </details>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-col">
+                <h4>关于世界无烟日</h4>
+                <p style="color: #b0bec5; font-size: 0.9rem;">每年的5月31日是世界无烟日，旨在提高公众对烟草危害的认识，并倡导无烟环境。</p>
+            </div>
+            <div class="footer-col">
+                <h4>快速链接</h4>
+                <ul>
+                    <li><a href="#harm">吸烟危害</a></li>
+                    <li><a href="#quit">戒烟方法</a></li>
+                    <li><a href="#secondhand">二手烟防护</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>相关资源</h4>
+                <ul>
+                    <li><a href="#">中国疾控中心控烟办公室</a></li>
+                    <li><a href="#">世界卫生组织官网</a></li>
+                    <li><a href="#">戒烟热线：12320</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2023 世界无烟日主题科普页面. 本页面仅供科普参考，不构成医疗建议。</p>
+        </div>
+    </footer>
+
+    <script>
+        function calculateBenefits(event) {
+            event.preventDefault();
+            
+            const cigsPerDay = parseInt(document.getElementById('cigsPerDay').value) || 0;
+            const pricePerPack = parseFloat(document.getElementById('pricePerPack').value) || 0;
+            const yearsToQuit = parseInt(document.getElementById('yearsToQuit').value) || 0;
+            
+            // 假设每天吸20支烟等于一包（简化计算）
+            const packsPerDay = cigsPerDay / 20;
+            const totalPacks = packsPerDay * 365 * yearsToQuit;
+            const savings = totalPacks * pricePerPack;
+            
+            // 假设每包烟缩短寿命约11分钟（约0.18小时）
+            const totalHoursLost = totalPacks * 0.18;
+            const yearsSaved = (totalHoursLost / 24) / 365;
+            
+            const resultDiv = document.getElementById('result');
+            const savingsText = document.getElementById('savingsText');
+            const lifeText = document.getElementById('lifeText');
+            
+            resultDiv.style.display = 'block';
+            savingsText.innerHTML = `在${yearsToQuit}年内，您将节省 <strong>${savings.toLocaleString()} 元</strong>。`;
+            lifeText.innerHTML = `这将帮助您挽回约 <strong>${yearsSaved.toFixed(1)} 年</strong> 的预期寿命。`;
+        }
+    </script>
+</body>
+</html>
