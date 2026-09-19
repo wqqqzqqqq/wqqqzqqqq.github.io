@@ -1,0 +1,719 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="长久传奇私服提供经典1.76复古、1.80金币、1.85合击等版本在线下载。专注服务器稳定运营、防外挂机制、满攻速爆率设置及玩家社区互动，致力于打造最良心、最持久的传奇游戏体验。">
+    <meta name="keywords" content="长久传奇私服,传奇私服下载,1.76复古传奇,1.80金币传奇,传奇SF,传奇私服网站">
+    <title>长久传奇私服-经典复古版本在线下载与玩家社区</title>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #8b0000;
+            --secondary-color: #d4af37;
+            --bg-dark: #0f0f0f;
+            --bg-card: #1a1a1a;
+            --text-main: #e0e0e0;
+            --text-muted: #a0a0a0;
+            --border-radius: 8px;
+            --spacing-unit: 16px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: "Microsoft YaHei", "Heiti SC", sans-serif;
+            background-color: var(--bg-dark);
+            color: var(--text-main);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.2s;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 var(--spacing-unit);
+        }
+
+        /* Header */
+        header {
+            background-color: rgba(15, 15, 15, 0.95);
+            border-bottom: 1px solid #333;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            padding: 15px 0;
+        }
+
+        .header-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: var(--secondary-color);
+            text-shadow: 0 0 10px rgba(212, 175, 55, 0.3);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo span {
+            color: var(--text-main);
+        }
+
+        nav ul {
+            display: flex;
+            gap: 20px;
+        }
+
+        nav a {
+            font-size: 15px;
+            color: var(--text-main);
+        }
+
+        nav a:hover {
+            color: var(--secondary-color);
+        }
+
+        .login-btn {
+            background: linear-gradient(45deg, var(--primary-color), #b30000);
+            padding: 8px 20px;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+
+        .login-btn:hover {
+            opacity: 0.9;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(to right, #1a0505 0%, #2a0a0a 50%, #1a0505 100%);
+            padding: 60px 0;
+            text-align: center;
+            border-bottom: 2px solid var(--secondary-color);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23d4af37' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+            opacity: 0.4;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .hero h1 {
+            font-size: 42px;
+            margin-bottom: 15px;
+            color: var(--secondary-color);
+            text-shadow: 0 2px 4px rgba(0,0,0,0.8);
+        }
+
+        .hero p {
+            font-size: 18px;
+            color: var(--text-muted);
+            margin-bottom: 30px;
+        }
+
+        .server-status {
+            display: inline-flex;
+            align-items: center;
+            background: rgba(0, 0, 0, 0.5);
+            padding: 5px 15px;
+            border-radius: 20px;
+            border: 1px solid #333;
+            margin-bottom: 25px;
+            font-size: 14px;
+        }
+
+        .status-dot {
+            width: 8px;
+            height: 8px;
+            background-color: #00ff00;
+            border-radius: 50%;
+            margin-right: 8px;
+            box-shadow: 0 0 8px #00ff00;
+        }
+
+        .download-actions {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            font-size: 16px;
+            font-weight: bold;
+            border-radius: var(--border-radius);
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: none;
+        }
+
+        .btn-primary {
+            background-color: var(--secondary-color);
+            color: #000;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(212, 175, 55, 0.4);
+        }
+
+        .btn-outline {
+            background: transparent;
+            border: 2px solid var(--secondary-color);
+            color: var(--secondary-color);
+        }
+
+        .btn-outline:hover {
+            background: rgba(212, 175, 55, 0.1);
+        }
+
+        /* Server List Section */
+        .section-title {
+            text-align: center;
+            margin: 50px 0 30px;
+            font-size: 28px;
+            color: var(--text-main);
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 3px;
+            background-color: var(--secondary-color);
+            margin: 10px auto 0;
+        }
+
+        .server-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-bottom: 50px;
+        }
+
+        .server-card {
+            background-color: var(--bg-card);
+            border: 1px solid #333;
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            transition: transform 0.3s, box-shadow 0.3s;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .server-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+            border-color: var(--secondary-color);
+        }
+
+        .card-header {
+            background-color: #252525;
+            padding: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #333;
+        }
+
+        .server-name {
+            font-size: 18px;
+            font-weight: bold;
+            color: var(--secondary-color);
+        }
+
+        .server-badge {
+            font-size: 12px;
+            padding: 2px 8px;
+            border-radius: 4px;
+            background-color: #333;
+            color: #ccc;
+        }
+
+        .badge-new { background-color: #0088cc; color: white; }
+        .badge-hot { background-color: #cc0000; color: white; }
+
+        .card-body {
+            padding: 20px;
+            flex: 1;
+        }
+
+        .server-stats {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+            margin-bottom: 15px;
+            font-size: 13px;
+            color: var(--text-muted);
+        }
+
+        .stat-item span {
+            display: block;
+            color: var(--text-main);
+            font-weight: bold;
+        }
+
+        .features-list {
+            margin-bottom: 20px;
+        }
+
+        .features-list li {
+            font-size: 13px;
+            margin-bottom: 8px;
+            padding-left: 15px;
+            position: relative;
+        }
+
+        .features-list li::before {
+            content: '✓';
+            color: var(--secondary-color);
+            position: absolute;
+            left: 0;
+        }
+
+        .card-footer {
+            padding: 15px;
+            border-top: 1px solid #333;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #222;
+        }
+
+        .btn-sm {
+            padding: 6px 16px;
+            font-size: 13px;
+        }
+
+        /* Content Layout */
+        .content-wrapper {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 30px;
+            margin-bottom: 50px;
+        }
+
+        @media (max-width: 768px) {
+            .content-wrapper {
+                grid-template-columns: 1fr;
+            }
+            .hero h1 {
+                font-size: 32px;
+            }
+            nav {
+                display: none;
+            }
+        }
+
+        /* Article List */
+        .news-list article {
+            background-color: var(--bg-card);
+            border-radius: var(--border-radius);
+            padding: 20px;
+            margin-bottom: 20px;
+            border-left: 4px solid var(--secondary-color);
+        }
+
+        .news-meta {
+            font-size: 12px;
+            color: var(--text-muted);
+            margin-bottom: 10px;
+        }
+
+        .news-title {
+            font-size: 18px;
+            margin-bottom: 10px;
+            line-height: 1.4;
+        }
+
+        .news-title a:hover {
+            color: var(--secondary-color);
+        }
+
+        .news-excerpt {
+            font-size: 14px;
+            color: var(--text-muted);
+            margin-bottom: 15px;
+        }
+
+        /* Sidebar */
+        aside .widget {
+            background-color: var(--bg-card);
+            border-radius: var(--border-radius);
+            padding: 20px;
+            margin-bottom: 20px;
+            border: 1px solid #333;
+        }
+
+        .widget-title {
+            font-size: 16px;
+            border-bottom: 1px solid #333;
+            padding-bottom: 10px;
+            margin-bottom: 15px;
+            color: var(--text-main);
+        }
+
+        .rank-list li {
+            display: flex;
+            align-items: center;
+            padding: 10px 0;
+            border-bottom: 1px dashed #333;
+        }
+
+        .rank-num {
+            width: 24px;
+            height: 24px;
+            background-color: #333;
+            color: #fff;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 24px;
+            font-size: 12px;
+            margin-right: 10px;
+        }
+
+        .rank-num.top-1 { background-color: #d4af37; color: #000; }
+        .rank-num.top-2 { background-color: #b8860b; color: #fff; }
+        .rank-num.top-3 { background-color: #cd7f32; color: #fff; }
+
+        .rank-info {
+            flex: 1;
+        }
+
+        .rank-name {
+            font-size: 14px;
+            color: var(--text-main);
+        }
+
+        .rank-level {
+            font-size: 12px;
+            color: var(--text-muted);
+        }
+
+        /* Footer */
+        footer {
+            background-color: #050505;
+            padding: 40px 0 20px;
+            border-top: 1px solid #333;
+            margin-top: 50px;
+            font-size: 13px;
+            color: var(--text-muted);
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+
+        .footer-col h4 {
+            color: var(--text-main);
+            margin-bottom: 15px;
+            font-size: 16px;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 8px;
+        }
+
+        .footer-col ul li a:hover {
+            color: var(--secondary-color);
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid #222;
+        }
+
+        /* Utility */
+        .highlight {
+            color: var(--secondary-color);
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="container header-inner">
+        <div class="logo">
+            <span>⚔️</span> 长久传奇私服
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#">首页</a></li>
+                <li><a href="#">版本专区</a></li>
+                <li><a href="#">新手指南</a></li>
+                <li><a href="#">玩家论坛</a></li>
+                <li><a href="#">客服中心</a></li>
+            </ul>
+        </nav>
+        <a href="#" class="login-btn">玩家登录</a>
+    </div>
+</header>
+
+<main class="container">
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <div class="server-status">
+                <span class="status-dot"></span>
+                全区在线人数: 3,482 | 延迟: 24ms
+            </div>
+            <h1>回归经典，重温热血</h1>
+            <p>专注长久运营的传奇私服，拒绝卡顿，公平竞技。提供1.76复古、1.85合击等多种版本，打造最纯粹的传奇体验。</p>
+            <div class="download-actions">
+                <a href="#" class="btn btn-primary">立即下载客户端</a>
+                <a href="#" class="btn btn-outline">查看服务器列表</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Servers -->
+    <h2 class="section-title">推荐服务器</h2>
+    <section class="server-grid">
+        <!-- Server 1 -->
+        <article class="server-card">
+            <div class="card-header">
+                <span class="server-name">龙腾天下 (1.76复古)</span>
+                <span class="server-badge badge-hot">人气王</span>
+            </div>
+            <div class="card-body">
+                <div class="server-stats">
+                    <div class="stat-item">开服时间 <span>2023.10.15</span></div>
+                    <div class="stat-item">当前等级 <span>35级封顶</span></div>
+                </div>
+                <ul class="features-list">
+                    <li>自动回收，全服爆率提升 200%</li>
+                    <li>首充送雷霆套装，上线即巅峰</li>
+                    <li>拥有安全区与自由PK区</li>
+                </ul>
+            </div>
+            <div class="card-footer">
+                <span style="font-size:12px; color:#666;">运营商: 龙腾网络</span>
+                <a href="#" class="btn btn-primary btn-sm">进入游戏</a>
+            </div>
+        </article>
+
+        <!-- Server 2 -->
+        <article class="server-card">
+            <div class="card-header">
+                <span class="server-name">九州争霸 (1.85合击)</span>
+                <span class="server-badge badge-new">新服</span>
+            </div>
+            <div class="card-body">
+                <div class="server-stats">
+                    <div class="stat-item">开服时间 <span>2023.11.01</span></div>
+                    <div class="stat-item">当前等级 <span>50级封顶</span></div>
+                </div>
+                <ul class="features-list">
+                    <li>三职业合击，技能绚丽震撼</li>
+                    <li>BOSS全程掉落，无元宝限制</li>
+                    <li>跨服战即将开启</li>
+                </ul>
+            </div>
+            <div class="card-footer">
+                <span style="font-size:12px; color:#666;">运营商: 九州互娱</span>
+                <a href="#" class="btn btn-primary btn-sm">进入游戏</a>
+            </div>
+        </article>
+
+        <!-- Server 3 -->
+        <article class="server-card">
+            <div class="card-header">
+                <span class="server-name">幻世传说 (1.80金币)</span>
+                <span class="server-badge">稳定</span>
+            </div>
+            <div class="card-body">
+                <div class="server-stats">
+                    <div class="stat-item">开服时间 <span>2023.08.20</span></div>
+                    <div class="stat-item">当前等级 <span>40级封顶</span></div>
+                </div>
+                <ul class="features-list">
+                    <li>金币回收机制，平衡经济系统</li>
+                    <li>装备全靠打，无VIP特权</li>
+                    <li>全天24小时GM在线维护</li>
+                </ul>
+            </div>
+            <div class="card-footer">
+                <span style="font-size:12px; color:#666;">运营商: 幻世科技</span>
+                <a href="#" class="btn btn-primary btn-sm">进入游戏</a>
+            </div>
+        </article>
+    </section>
+
+    <!-- Main Content Area -->
+    <div class="content-wrapper">
+        <!-- News/Articles -->
+        <section class="news-list">
+            <h2 class="section-title" style="text-align:left; margin-top:0;">最新动态</h2>
+            
+            <article>
+                <div class="news-meta">2023-11-05 | 攻略资讯</div>
+                <h3 class="news-title"><a href="#">1.76复古版本战士职业加点与PK技巧详解</a></h3>
+                <p class="news-excerpt">在长久传奇私服中，战士作为近战物理输出的核心，如何合理分配属性点以在PK中占据优势？本文将详细解析烈火剑法的释放时机与刺杀剑术的走位技巧，助你称霸沙巴克。</p>
+                <a href="#" style="color:var(--secondary-color); font-size:14px;">阅读更多 &rarr;</a>
+            </article>
+
+            <article>
+                <div class="news-meta">2023-11-03 | 公告通知</div>
+                <h3 class="news-title"><a href="#">关于“九州争霸”服务器维护及版本更新的公告</a></h3>
+                <p class="news-excerpt">为了提供更好的游戏体验，服务器将于本周五凌晨02:00进行停机维护，预计维护时间为4小时。本次更新将新增跨服战场地图，并优化部分BOSS掉落机制。</p>
+                <a href="#" style="color:var(--secondary-color); font-size:14px;">阅读更多 &rarr;</a>
+            </article>
+
+            <article>
+                <div class="news-meta">2023-10-30 | 游戏资讯</div>
+                <h3 class="news-title"><a href="#">1.85合击版本法师如何快速刷怪升级？</a></h3>
+                <p class="news-excerpt">法师拥有强大的群体攻击技能，是快速升级的首选职业。本文分享几个刷怪效率最高的地图点位，以及装备搭配建议，让你轻松突破等级瓶颈。</p>
+                <a href="#" style="color:var(--secondary-color); font-size:14px;">阅读更多 &rarr;</a>
+            </article>
+        </section>
+
+        <!-- Sidebar -->
+        <aside>
+            <!-- Login Widget -->
+            <div class="widget">
+                <h4 class="widget-title">玩家登录</h4>
+                <form onsubmit="event.preventDefault(); alert('演示页面，请勿提交表单');">
+                    <input type="text" placeholder="玩家昵称" style="width:100%; padding:10px; margin-bottom:10px; background:#222; border:1px solid #444; color:#fff; border-radius:4px;">
+                    <input type="password" placeholder="密码" style="width:100%; padding:10px; margin-bottom:10px; background:#222; border:1px solid #444; color:#fff; border-radius:4px;">
+                    <button type="submit" class="btn btn-primary btn-sm" style="width:100%;">立即登录</button>
+                </form>
+                <div style="text-align:center; margin-top:10px;">
+                    <a href="#" style="font-size:12px; color:#666;">注册账号</a> | <a href="#" style="font-size:12px; color:#666;">找回密码</a>
+                </div>
+            </div>
+
+            <!-- Ranking Widget -->
+            <div class="widget">
+                <h4 class="widget-title">全服排行榜</h4>
+                <ul class="rank-list">
+                    <li>
+                        <span class="rank-num top-1">1</span>
+                        <div class="rank-info">
+                            <div class="rank-name">笑看红尘</div>
+                            <div class="rank-level">等级: 35 | 战士</div>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="rank-num top-2">2</span>
+                        <div class="rank-info">
+                            <div class="rank-name">冰封王座</div>
+                            <div class="rank-level">等级: 35 | 法师</div>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="rank-num top-3">3</span>
+                        <div class="rank-info">
+                            <div class="rank-name">醉卧沙场</div>
+                            <div class="rank-level">等级: 35 | 道士</div>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="rank-num">4</span>
+                        <div class="rank-info">
+                            <div class="rank-name">狂龙出海</div>
+                            <div class="rank-level">等级: 34 | 战士</div>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="rank-num">5</span>
+                        <div class="rank-info">
+                            <div class="rank-name">战无不胜</div>
+                            <div class="rank-level">等级: 34 | 道士</div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Ad Placeholder -->
+            <div class="widget" style="background:#222; min-height:200px; display:flex; align-items:center; justify-content:center; color:#555;">
+                广告位：合作推广
+            </div>
+        </aside>
+    </div>
+</main>
+
+<footer>
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h4>关于我们</h4>
+                <p style="font-size:12px; line-height:1.8; color:#888;">
+                    本站致力于提供最稳定、最长久运营的传奇私服资源。我们坚持公平公正的游戏环境，拒绝外挂与恶意破坏，只为还原最纯粹的传奇回忆。
+                </p>
+            </div>
+            <div class="footer-col">
+                <h4>快速导航</h4>
+                <ul>
+                    <li><a href="#">版本介绍</a></li>
+                    <li><a href="#">新手教程</a></li>
+                    <li><a href="#">下载中心</a></li>
+                    <li><a href="#">玩家论坛</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>服务条款</h4>
+                <ul>
+                    <li><a href="#">用户协议</a></li>
+                    <li><a href="#">隐私政策</a></li>
+                    <li><a href="#">防沉迷提示</a></li>
+                    <li><a href="#">违规举报</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>联系方式</h4>
+                <ul>
+                    <li>客服QQ: 123456789</li>
+                    <li>官方微信: LcCqsf</li>
+                    <li>工作时间: 9:00 - 22:00</li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2023 长久传奇私服. All Rights Reserved. 仅供娱乐体验，请勿沉迷。</p>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>
