@@ -1,0 +1,675 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="嘿丝科技官网 - 提供专业的企业级网络安全解决方案、服务器运维服务及数据安全防护系统，致力于为企业和个人用户构建稳固的数字防线。">
+    <meta name="keywords" content="嘿丝科技,网络安全,服务器运维,数据加密,企业防火墙,安全防护">
+    <title>嘿丝科技-企业级网络安全与数据防护解决方案服务商</title>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #0056b3;
+            --primary-dark: #004494;
+            --secondary-color: #00d2ff;
+            --text-main: #333333;
+            --text-light: #666666;
+            --bg-light: #f4f7f9;
+            --bg-white: #ffffff;
+            --border-radius: 8px;
+            --shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            --container-width: 1200px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+            color: var(--text-main);
+            line-height: 1.6;
+            background-color: var(--bg-white);
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.3s ease;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* Header */
+        header {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 1px 0 rgba(0,0,0,0.05);
+        }
+
+        .container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .nav-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .logo span {
+            color: var(--text-main);
+        }
+
+        nav ul {
+            display: flex;
+            gap: 30px;
+        }
+
+        nav a {
+            font-size: 15px;
+            font-weight: 500;
+            color: var(--text-main);
+        }
+
+        nav a:hover {
+            color: var(--primary-color);
+        }
+
+        .cta-button {
+            background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
+            color: white;
+            padding: 10px 24px;
+            border-radius: var(--border-radius);
+            font-weight: 600;
+            font-size: 14px;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 4px 12px rgba(0, 86, 179, 0.3);
+            color: white;
+        }
+
+        /* Hero Section */
+        .hero {
+            padding-top: 140px;
+            padding-bottom: 80px;
+            background: linear-gradient(180deg, #f0f7ff 0%, #ffffff 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .hero-text h1 {
+            font-size: 42px;
+            line-height: 1.2;
+            margin-bottom: 24px;
+            color: #1a202c;
+        }
+
+        .hero-text h1 span {
+            color: var(--primary-color);
+        }
+
+        .hero-text p {
+            font-size: 18px;
+            color: var(--text-light);
+            margin-bottom: 32px;
+            max-width: 500px;
+        }
+
+        .hero-btns {
+            display: flex;
+            gap: 16px;
+        }
+
+        .btn-outline {
+            border: 2px solid var(--primary-color);
+            color: var(--primary-color);
+            padding: 10px 24px;
+            border-radius: var(--border-radius);
+            font-weight: 600;
+        }
+
+        .btn-outline:hover {
+            background: var(--primary-color);
+            color: white;
+        }
+
+        .hero-visual {
+            position: relative;
+        }
+
+        .hero-visual img {
+            width: 100%;
+            height: auto;
+            border-radius: 16px;
+            box-shadow: 0 20px 40px rgba(0, 86, 179, 0.15);
+        }
+
+        .stat-card {
+            position: absolute;
+            background: white;
+            padding: 16px 24px;
+            border-radius: 12px;
+            box-shadow: var(--shadow);
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .stat-card.top-left {
+            top: -20px;
+            left: -20px;
+        }
+
+        .stat-card.bottom-right {
+            bottom: -20px;
+            right: -20px;
+        }
+
+        .stat-icon {
+            width: 40px;
+            height: 40px;
+            background: #e6f0ff;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--primary-color);
+        }
+
+        .stat-text strong {
+            display: block;
+            font-size: 20px;
+            color: var(--text-main);
+        }
+
+        .stat-text span {
+            font-size: 13px;
+            color: var(--text-light);
+        }
+
+        /* Services Section */
+        .section {
+            padding: 80px 0;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .section-header h2 {
+            font-size: 32px;
+            margin-bottom: 16px;
+        }
+
+        .section-header p {
+            color: var(--text-light);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .service-card {
+            background: white;
+            padding: 40px 30px;
+            border-radius: var(--border-radius);
+            border: 1px solid #eee;
+            transition: all 0.3s ease;
+        }
+
+        .service-card:hover {
+            border-color: var(--primary-color);
+            box-shadow: var(--shadow);
+            transform: translateY(-5px);
+        }
+
+        .service-icon {
+            font-size: 40px;
+            margin-bottom: 24px;
+            color: var(--primary-color);
+        }
+
+        .service-card h3 {
+            font-size: 20px;
+            margin-bottom: 12px;
+        }
+
+        .service-card p {
+            color: var(--text-light);
+            font-size: 15px;
+        }
+
+        /* Tech Stack/Features */
+        .features-section {
+            background-color: var(--bg-light);
+        }
+
+        .features-wrapper {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .feature-list {
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+
+        .feature-item {
+            display: flex;
+            gap: 20px;
+        }
+
+        .feature-number {
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--secondary-color);
+            min-width: 40px;
+        }
+
+        .feature-content h4 {
+            font-size: 18px;
+            margin-bottom: 6px;
+        }
+
+        .feature-content p {
+            font-size: 14px;
+            color: var(--text-light);
+        }
+
+        .feature-image img {
+            width: 100%;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+        }
+
+        /* Stats Banner */
+        .stats-banner {
+            background: var(--primary-color);
+            color: white;
+            padding: 60px 0;
+            margin-top: 0;
+        }
+
+        .stats-grid {
+            display: flex;
+            justify-content: space-around;
+            text-align: center;
+            flex-wrap: wrap;
+            gap: 30px;
+        }
+
+        .stat-item h3 {
+            font-size: 36px;
+            margin-bottom: 8px;
+        }
+
+        .stat-item p {
+            opacity: 0.9;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            text-align: center;
+            background: white;
+            padding: 80px 0;
+        }
+
+        .cta-box {
+            background: linear-gradient(135deg, #0056b3, #00d2ff);
+            border-radius: 20px;
+            padding: 60px;
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-box h2 {
+            font-size: 32px;
+            margin-bottom: 20px;
+        }
+
+        .cta-box p {
+            font-size: 18px;
+            margin-bottom: 30px;
+            opacity: 0.9;
+        }
+
+        /* Footer */
+        footer {
+            background: #1a202c;
+            color: #a0aec0;
+            padding: 60px 0 20px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-brand h4 {
+            color: white;
+            font-size: 22px;
+            margin-bottom: 16px;
+        }
+
+        .footer-brand p {
+            font-size: 14px;
+            max-width: 300px;
+            line-height: 1.8;
+        }
+
+        .footer-col h5 {
+            color: white;
+            font-size: 16px;
+            margin-bottom: 20px;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 12px;
+        }
+
+        .footer-col ul li a:hover {
+            color: var(--secondary-color);
+        }
+
+        .footer-bottom {
+            border-top: 1px solid #2d3748;
+            padding-top: 20px;
+            text-align: center;
+            font-size: 13px;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-wrapper nav {
+                display: none;
+            }
+
+            .hero-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .hero-text h1 {
+                font-size: 32px;
+            }
+
+            .hero-text p {
+                margin: 0 auto 32px;
+            }
+
+            .hero-btns {
+                justify-content: center;
+            }
+
+            .hero-visual {
+                margin-top: 40px;
+                display: none;
+            }
+
+            .features-wrapper {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .footer-brand p {
+                margin: 0 auto;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container nav-wrapper">
+            <a href="#" class="logo">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+                嘿丝科技<span>HEISI</span>
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="#services">核心服务</a></li>
+                    <li><a href="#solutions">解决方案</a></li>
+                    <li><a href="#about">关于我们</a></li>
+                    <li><a href="#cases">客户案例</a></li>
+                </ul>
+            </nav>
+            <a href="#contact" class="cta-button">立即咨询</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container hero-content">
+                <div class="hero-text">
+                    <h1>构筑坚不可摧的 <br><span>数字安全防线</span></h1>
+                    <p>嘿丝科技专注于为企业提供全方位的网络安全解决方案、服务器运维及数据加密服务，确保您的核心资产在数字世界中安全无忧。</p>
+                    <div class="hero-btns">
+                        <a href="#services" class="cta-button">探索服务</a>
+                        <a href="#contact" class="btn-outline">联系我们</a>
+                    </div>
+                </div>
+                <div class="hero-visual">
+                    <img src="https://picsum.photos/seed/techsecurity/600/400.jpg" alt="网络安全防护示意图">
+                    <div class="stat-card top-left">
+                        <div class="stat-icon">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+                        </div>
+                        <div class="stat-text">
+                            <strong>99.9%</strong>
+                            <span>系统可用性</span>
+                        </div>
+                    </div>
+                    <div class="stat-card bottom-right">
+                        <div class="stat-icon">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+                        </div>
+                        <div class="stat-text">
+                            <strong>24/7</strong>
+                            <span>实时监控</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="services" class="section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>专业核心服务</h2>
+                    <p>基于前沿技术，为不同规模的企业提供定制化的网络安全与运维支持</p>
+                </div>
+                <div class="services-grid">
+                    <article class="service-card">
+                        <div class="service-icon">
+                            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+                        </div>
+                        <h3>数据加密传输</h3>
+                        <p>采用AES-256等国际标准加密算法，确保数据在传输和存储过程中的绝对安全，防止数据泄露。</p>
+                    </article>
+                    <article class="service-card">
+                        <div class="service-icon">
+                            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                        </div>
+                        <h3>企业级防火墙</h3>
+                        <p>部署下一代防火墙（NGFW），提供应用层检测与威胁情报分析，有效阻断DDoS攻击与恶意入侵。</p>
+                    </article>
+                    <article class="service-card">
+                        <div class="service-icon">
+                            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg>
+                        </div>
+                        <h3>服务器运维</h3>
+                        <p>提供7x24小时服务器监控与自动化运维服务，保障系统稳定运行，快速响应故障告警。</p>
+                    </article>
+                    <article class="service-card">
+                        <div class="service-icon">
+                            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
+                        </div>
+                        <h3>合规性审计</h3>
+                        <p>协助企业通过等保测评（等保2.0）及ISO27001认证，建立完善的网络安全管理体系。</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features/About Section -->
+        <section id="solutions" class="section features-section">
+            <div class="container features-wrapper">
+                <div class="feature-image">
+                    <img src="https://picsum.photos/seed/serverroom/600/450.jpg" alt="专业数据中心">
+                </div>
+                <div class="feature-list">
+                    <h2>为什么选择嘿丝科技？</h2>
+                    <p style="margin-bottom: 30px; color: var(--text-light);">我们拥有资深的安全专家团队和自主研发的安全管理平台，致力于解决复杂网络环境下的安全挑战。</p>
+                    
+                    <div class="feature-item">
+                        <div class="feature-number">01</div>
+                        <div class="feature-content">
+                            <h4>自主研发安全引擎</h4>
+                            <p>基于机器学习的威胁检测引擎，能够识别未知威胁，误报率低于行业平均水平。</p>
+                        </div>
+                    </div>
+                    
+                    <div class="feature-item">
+                        <div class="feature-number">02</div>
+                        <div class="feature-content">
+                            <h4>敏捷响应机制</h4>
+                            <p>建立安全事件应急响应团队，一旦发生安全事件，平均响应时间控制在15分钟内。</p>
+                        </div>
+                    </div>
+                    
+                    <div class="feature-item">
+                        <div class="feature-number">03</div>
+                        <div class="feature-content">
+                            <h4>定制化安全方案</h4>
+                            <p>拒绝千篇一律，根据企业业务架构、数据类型及合规要求，量身打造安全策略。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Stats Banner -->
+        <section class="stats-banner">
+            <div class="container stats-grid">
+                <div class="stat-item">
+                    <h3>500+</h3>
+                    <p>服务企业客户</p>
+                </div>
+                <div class="stat-item">
+                    <h3>10年+</h3>
+                    <p>行业安全经验</p>
+                </div>
+                <div class="stat-item">
+                    <h3>1000+</h3>
+                    <p>成功防御攻击</p>
+                </div>
+                <div class="stat-item">
+                    <h3>24/7</h3>
+                    <p>专家团队值守</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section id="contact" class="cta-section">
+            <div class="container">
+                <div class="cta-box">
+                    <h2>准备好保护您的数字资产了吗？</h2>
+                    <p>联系嘿丝科技，获取免费的网络安全评估报告与定制化解决方案。</p>
+                    <a href="mailto:contact@heisi-tech.com" class="cta-button" style="background: white; color: var(--primary-color);">立即联系客服</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <h4>嘿丝科技 HEISI</h4>
+                    <p>专注于为全球企业提供值得信赖的网络安全服务与数字化基础设施保障。守护数据，连接未来。</p>
+                </div>
+                <div class="footer-col">
+                    <h5>产品与服务</h5>
+                    <ul>
+                        <li><a href="#">云安全防护</a></li>
+                        <li><a href="#">服务器托管</a></li>
+                        <li><a href="#">DDoS清洗</a></li>
+                        <li><a href="#">漏洞扫描</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h5>解决方案</h5>
+                    <ul>
+                        <li><a href="#">金融行业安全</a></li>
+                        <li><a href="#">电商数据保护</a></li>
+                        <li><a href="#">政府机关合规</a></li>
+                        <li><a href="#">中小企业防护</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h5>关于我们</h5>
+                    <ul>
+                        <li><a href="#">公司简介</a></li>
+                        <li><a href="#">加入我们</a></li>
+                        <li><a href="#">新闻动态</a></li>
+                        <li><a href="#">隐私政策</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 嘿丝科技有限公司 版权所有 | 京ICP备XXXXXXXX号</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
