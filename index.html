@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="花都石头记矿物园官方首页，提供矿物奇石收藏鉴赏、地质科普教育、特色餐饮购物及休闲旅游服务。了解奇石文化，探索自然奥秘。">
+    <meta name="keywords" content="花都石头记矿物园,矿物园,奇石鉴赏,地质科普,旅游攻略,矿物收藏">
+    <title>花都石头记矿物园-奇石鉴赏与地质科普旅游胜地</title>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --accent-color: #d4a373;
+            --bg-light: #fdfbf7;
+            --text-dark: #333333;
+            --text-light: #666666;
+            --white: #ffffff;
+            --spacing-sm: 8px;
+            --spacing-md: 16px;
+            --spacing-lg: 32px;
+            --spacing-xl: 64px;
+            --radius: 8px;
+            --shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            --shadow-hover: 0 10px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: "PingFang SC", "Microsoft YaHei", sans-serif;
+            background-color: var(--bg-light);
+            color: var(--text-dark);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.3s;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        /* Container */
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 var(--spacing-md);
+        }
+
+        /* Header */
+        header {
+            background-color: var(--white);
+            box-shadow: var(--shadow);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .header-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo span {
+            color: var(--accent-color);
+        }
+
+        nav ul {
+            display: flex;
+            gap: var(--spacing-lg);
+        }
+
+        nav a {
+            font-weight: 500;
+            font-size: 16px;
+            color: var(--text-dark);
+        }
+
+        nav a:hover, nav a.active {
+            color: var(--accent-color);
+        }
+
+        .cta-btn {
+            background-color: var(--primary-color);
+            color: var(--white);
+            padding: 8px 20px;
+            border-radius: 20px;
+            font-size: 14px;
+            transition: background-color 0.3s;
+        }
+
+        .cta-btn:hover {
+            background-color: var(--accent-color);
+        }
+
+        /* Mobile Menu Button */
+        .menu-toggle {
+            display: none;
+            font-size: 24px;
+            cursor: pointer;
+        }
+
+        /* Hero Section */
+        .hero {
+            position: relative;
+            height: 500px;
+            background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('https://picsum.photos/seed/stonepark/1600/900.jpg');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: var(--white);
+        }
+
+        .hero-content {
+            max-width: 800px;
+            padding: var(--spacing-lg);
+            animation: fadeIn 1s ease-out;
+        }
+
+        .hero h1 {
+            font-size: 48px;
+            margin-bottom: var(--spacing-md);
+            text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+        }
+
+        .hero p {
+            font-size: 20px;
+            margin-bottom: var(--spacing-lg);
+            opacity: 0.9;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: var(--spacing-md);
+            justify-content: center;
+        }
+
+        .btn-primary {
+            background-color: var(--accent-color);
+            color: var(--white);
+            padding: 12px 30px;
+            border-radius: 4px;
+            font-weight: bold;
+            display: inline-block;
+        }
+
+        .btn-secondary {
+            background-color: rgba(255, 255, 255, 0.2);
+            color: var(--white);
+            padding: 12px 30px;
+            border-radius: 4px;
+            font-weight: bold;
+            display: inline-block;
+            backdrop-filter: blur(5px);
+            border: 1px solid rgba(255, 255, 255, 0.5);
+        }
+
+        /* Intro Section */
+        .intro {
+            padding: var(--spacing-xl) 0;
+            background-color: var(--white);
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: var(--spacing-xl);
+        }
+
+        .section-title h2 {
+            font-size: 32px;
+            color: var(--primary-color);
+            margin-bottom: var(--spacing-sm);
+        }
+
+        .section-title p {
+            color: var(--text-light);
+        }
+
+        .intro-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: var(--spacing-lg);
+        }
+
+        .intro-card {
+            text-align: center;
+            padding: var(--spacing-lg);
+            border-radius: var(--radius);
+            transition: transform 0.3s;
+        }
+
+        .intro-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .icon-box {
+            font-size: 48px;
+            margin-bottom: var(--spacing-md);
+            color: var(--accent-color);
+        }
+
+        /* Gallery Section */
+        .gallery {
+            padding: var(--spacing-xl) 0;
+            background-color: var(--bg-light);
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: var(--spacing-md);
+        }
+
+        .gallery-item {
+            position: relative;
+            border-radius: var(--radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            aspect-ratio: 1 / 1;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+
+        .overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+            padding: 20px;
+            color: var(--white);
+            transform: translateY(100%);
+            transition: transform 0.3s;
+        }
+
+        .gallery-item:hover .overlay {
+            transform: translateY(0);
+        }
+
+        /* Features Section */
+        .features {
+            padding: var(--spacing-xl) 0;
+            background-color: var(--white);
+        }
+
+        .feature-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: var(--spacing-lg);
+        }
+
+        .feature-item {
+            flex: 1 1 300px;
+            display: flex;
+            gap: var(--spacing-md);
+            align-items: flex-start;
+        }
+
+        .feature-number {
+            font-size: 48px;
+            font-weight: bold;
+            color: rgba(44, 62, 80, 0.1);
+            line-height: 1;
+        }
+
+        .feature-content h3 {
+            font-size: 20px;
+            margin-bottom: var(--spacing-sm);
+        }
+
+        .feature-content p {
+            color: var(--text-light);
+            font-size: 14px;
+        }
+
+        /* Ticket Info */
+        .ticket-info {
+            padding: var(--spacing-xl) 0;
+            background: linear-gradient(135deg, var(--primary-color) 0%, #34495e 100%);
+            color: var(--white);
+        }
+
+        .ticket-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            text-align: center;
+        }
+
+        .ticket-item {
+            padding: var(--spacing-lg);
+            min-width: 200px;
+        }
+
+        .ticket-price {
+            font-size: 36px;
+            font-weight: bold;
+            color: var(--accent-color);
+            margin: var(--spacing-sm) 0;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #1a252f;
+            color: #bdc3c7;
+            padding: var(--spacing-xl) 0 var(--spacing-md);
+            font-size: 14px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: var(--spacing-xl);
+            margin-bottom: var(--spacing-xl);
+        }
+
+        .footer-col h4 {
+            color: var(--white);
+            margin-bottom: var(--spacing-md);
+            font-size: 18px;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 8px;
+        }
+
+        .footer-col ul li a:hover {
+            color: var(--accent-color);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: var(--spacing-md);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .header-inner {
+                padding: 0 var(--spacing-md);
+            }
+
+            nav {
+                display: none;
+                position: absolute;
+                top: 70px;
+                left: 0;
+                width: 100%;
+                background-color: var(--white);
+                box-shadow: var(--shadow);
+                padding: var(--spacing-md);
+            }
+
+            nav.active {
+                display: block;
+            }
+
+            nav ul {
+                flex-direction: column;
+                gap: var(--spacing-md);
+            }
+
+            .menu-toggle {
+                display: block;
+            }
+
+            .hero h1 {
+                font-size: 32px;
+            }
+
+            .hero-buttons {
+                flex-direction: column;
+            }
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="container header-inner">
+            <a href="#" class="logo">
+                <span>★</span> 花都石头记矿物园
+            </a>
+            <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+            <nav id="main-nav">
+                <ul>
+                    <li><a href="#intro" class="active">园区简介</a></li>
+                    <li><a href="#gallery">奇石鉴赏</a></li>
+                    <li><a href="#features">特色服务</a></li>
+                    <li><a href="#ticket">门票攻略</a></li>
+                    <li><a href="#contact">联系我们</a></li>
+                </ul>
+            </nav>
+            <a href="#ticket" class="cta-btn">在线购票</a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>探寻自然之美，感悟天地灵韵</h1>
+            <p>中国最大的矿物奇石主题公园，集收藏、鉴赏、科普、休闲于一体。在这里，每一块石头都诉说着亿万年的地质传奇。</p>
+            <div class="hero-buttons">
+                <a href="#intro" class="btn-primary">了解园区</a>
+                <a href="#gallery" class="btn-secondary">浏览藏品</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Intro Section -->
+    <section id="intro" class="intro">
+        <div class="container">
+            <div class="section-title">
+                <h2>关于花都石头记</h2>
+                <p>走进石头记，开启一场穿越时空的地质之旅</p>
+            </div>
+            <div class="intro-grid">
+                <article class="intro-card">
+                    <div class="icon-box">💎</div>
+                    <h3>奇石收藏</h3>
+                    <p>收藏有观赏价值的天然石种，包括矿物晶体、玛瑙、水晶、古生物化石等，展现大自然的鬼斧神工。</p>
+                </article>
+                <article class="intro-card">
+                    <div class="icon-box">📚</div>
+                    <h3>地质科普</h3>
+                    <p>通过丰富的展陈和互动体验，普及矿物岩石知识，培养公众对自然科学的兴趣和保护环境的意识。</p>
+                </article>
+                <article class="intro-card">
+                    <div class="icon-box">🍽️</div>
+                    <h3>特色餐饮</h3>
+                    <p>园区内设有特色餐厅，提供以石文化为主题的创意美食，让您在游览之余享受味蕾盛宴。</p>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="gallery">
+        <div class="container">
+            <div class="section-title">
+                <h2>奇石鉴赏</h2>
+                <p>精选馆藏珍品，领略千姿百态的矿物魅力</p>
+            </div>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="https://picsum.photos/seed/stone1/400/400.jpg" alt="矿物晶体">
+                    <div class="overlay">
+                        <h3>矿物晶体</h3>
+                        <p>色彩斑斓，晶莹剔透</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://picsum.photos/seed/stone2/400/400.jpg" alt="玛瑙奇石">
+                    <div class="overlay">
+                        <h3>玛瑙奇石</h3>
+                        <p>纹理独特，温润如玉</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://picsum.photos/seed/stone3/400/400.jpg" alt="古生物化石">
+                    <div class="overlay">
+                        <h3>古生物化石</h3>
+                        <p>凝固的时间，历史的见证</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://picsum.photos/seed/stone4/400/400.jpg" alt="观赏石">
+                    <div class="overlay">
+                        <h3>观赏石</h3>
+                        <p>形态各异，意境深远</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features">
+        <div class="container">
+            <div class="section-title">
+                <h2>园区特色</h2>
+                <p>多维度的体验，满足您的多元化需求</p>
+            </div>
+            <div class="feature-list">
+                <div class="feature-item">
+                    <div class="feature-number">01</div>
+                    <div class="feature-content">
+                        <h3>专业讲解服务</h3>
+                        <p>提供专业导游讲解，深入了解每块石头的形成过程与文化背景，让参观更具教育意义。</p>
+                    </div>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-number">02</div>
+                    <div class="feature-content">
+                        <h3>研学旅行基地</h3>
+                        <p>作为科普教育基地，常年接待学校团队，提供定制化的地质研学课程和实践活动。</p>
+                    </div>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-number">03</div>
+                    <div class="feature-content">
+                        <h3>文创购物体验</h3>
+                        <p>园区内设有矿物文创商店，销售精美的矿物标本、饰品及纪念品，将自然之美带回家。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Ticket Info Section -->
+    <section id="ticket" class="ticket-info">
+        <div class="container ticket-container">
+            <div class="ticket-item">
+                <h3>成人票</h3>
+                <div class="ticket-price">¥ 60</div>
+                <p>适用于1.4米以上游客</p>
+            </div>
+            <div class="ticket-item">
+                <h3>儿童/学生票</h3>
+                <div class="ticket-price">¥ 30</div>
+                <p>适用于1.4米以下及在校学生</p>
+            </div>
+            <div class="ticket-item">
+                <h3>老年票</h3>
+                <div class="ticket-price">¥ 30</div>
+                <p>适用于60岁以上老人（需凭证）</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact / Footer -->
+    <footer id="contact">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>园区简介</h4>
+                    <p>花都石头记矿物园是集奇石收藏、展览、科普、餐饮、购物于一体的综合性矿物主题公园。园内珍藏着数万件天然奇石，是广州市科普教育基地。</p>
+                </div>
+                <div class="footer-col">
+                    <h4>快速链接</h4>
+                    <ul>
+                        <li><a href="#intro">园区概况</a></li>
+                        <li><a href="#gallery">藏品欣赏</a></li>
+                        <li><a href="#ticket">购票指南</a></li>
+                        <li><a href="#">交通指南</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>联系我们</h4>
+                    <ul>
+                        <li>地址：广州市花都区新华镇</li>
+                        <li>电话：020-12345678</li>
+                        <li>邮箱：info@stonepark.com</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 花都石头记矿物园 版权所有 | 建议使用Chrome浏览器访问以获得最佳体验</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            const nav = document.getElementById('main-nav');
+            nav.classList.toggle('active');
+        }
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                    // Close mobile menu if open
+                    document.getElementById('main-nav').classList.remove('active');
+                }
+            });
+        });
+    </script>
+</body>
+  </html>
