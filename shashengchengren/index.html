@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>杀生成仁 - 儒家核心思想解读与伦理实践指南</title>
+    <meta name="description" content="杀生成仁专题页：深度解析儒家“杀生成仁”的核心哲学内涵、历史典故（如微子、箕子、比干）、当代伦理价值及现实应用场景。提供思想溯源与道德思辨指南。">
+    <meta name="keywords" content="杀生成仁, 儒家思想, 仁义, 比干, 商朝, 历史典故, 伦理道德, 古文释义">
+    <style>
+        :root {
+            --primary-color: #8B0000; /* 深红，象征庄重与牺牲 */
+            --secondary-color: #2c3e50; /* 深蓝灰，象征理性 */
+            --accent-color: #d4af37; /* 金色，象征荣誉与价值 */
+            --bg-color: #f9f7f2; /* 宣纸色 */
+            --card-bg: #ffffff;
+            --text-main: #333333;
+            --text-light: #666666;
+            --spacing-unit: 1rem;
+            --border-radius: 8px;
+            --shadow: 0 4px 6px rgba(0,0,0,0.05);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: "PingFang SC", "Microsoft YaHei", "SimSun", serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.8;
+            font-size: 16px;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.3s;
+        }
+
+        a:hover {
+            color: var(--primary-color);
+        }
+
+        /* Header */
+        header {
+            background-color: var(--card-bg);
+            box-shadow: var(--shadow);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--primary-color);
+            letter-spacing: 2px;
+            border-bottom: 2px solid var(--primary-color);
+            padding-bottom: 2px;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        nav a {
+            font-size: 1rem;
+            color: var(--secondary-color);
+            font-weight: 500;
+        }
+
+        nav a:hover {
+            color: var(--primary-color);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://picsum.photos/seed/history/1920/1080');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 6rem 2rem;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+            font-family: "Songti SC", "SimSun", serif;
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            max-width: 800px;
+            margin: 0 auto 2.5rem;
+            opacity: 0.9;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background-color: var(--primary-color);
+            color: white;
+            padding: 0.8rem 2rem;
+            border-radius: 4px;
+            font-size: 1.1rem;
+            border: 1px solid var(--primary-color);
+        }
+
+        .cta-button:hover {
+            background-color: #a50000;
+            color: white;
+        }
+
+        /* Main Content */
+        main {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 3rem 2rem;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .section-title h2 {
+            font-size: 2.2rem;
+            color: var(--secondary-color);
+            margin-bottom: 0.5rem;
+        }
+
+        .section-title .divider {
+            width: 60px;
+            height: 3px;
+            background-color: var(--primary-color);
+            margin: 0 auto;
+        }
+
+        /* Concept Grid */
+        .concept-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-bottom: 4rem;
+        }
+
+        .concept-card {
+            background: var(--card-bg);
+            padding: 2rem;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            border-top: 4px solid var(--accent-color);
+            transition: transform 0.3s;
+        }
+
+        .concept-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .concept-card h3 {
+            margin-bottom: 1rem;
+            color: var(--secondary-color);
+        }
+
+        .concept-card p {
+            color: var(--text-light);
+            text-align: justify;
+        }
+
+        /* Historical Context Section */
+        .history-section {
+            background-color: white;
+            padding: 3rem;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            margin-bottom: 4rem;
+        }
+
+        .history-content {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        .history-text {
+            flex: 1;
+            min-width: 300px;
+        }
+
+        .history-text h3 {
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+            color: var(--primary-color);
+        }
+
+        .history-text p {
+            margin-bottom: 1rem;
+        }
+
+        .history-visual {
+            flex: 1;
+            min-width: 300px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .history-visual img {
+            max-width: 100%;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+        }
+
+        /* Comparison Table */
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 2rem;
+            background: white;
+        }
+
+        .comparison-table th, .comparison-table td {
+            border: 1px solid #ddd;
+            padding: 1rem;
+            text-align: left;
+        }
+
+        .comparison-table th {
+            background-color: var(--secondary-color);
+            color: white;
+        }
+
+        .comparison-table tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        /* Ethics Application */
+        .ethics-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .ethics-item {
+            text-align: center;
+            padding: 1.5rem;
+            border: 1px solid #eee;
+            border-radius: var(--border-radius);
+        }
+
+        .ethics-icon {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            color: var(--primary-color);
+        }
+
+        /* FAQ Section */
+        .faq-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        details {
+            background: white;
+            margin-bottom: 1rem;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            overflow: hidden;
+        }
+
+        summary {
+            padding: 1.2rem;
+            cursor: pointer;
+            font-weight: bold;
+            list-style: none;
+            position: relative;
+            padding-right: 3rem;
+        }
+
+        summary::-webkit-details-marker {
+            display: none;
+        }
+
+        summary::after {
+            content: '+';
+            position: absolute;
+            right: 1.2rem;
+            font-size: 1.5rem;
+            color: var(--primary-color);
+        }
+
+        details[open] summary::after {
+            content: '-';
+        }
+
+        .faq-content {
+            padding: 0 1.2rem 1.2rem;
+            color: var(--text-light);
+            border-top: 1px solid #eee;
+            padding-top: 1rem;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--secondary-color);
+            color: #ccc;
+            padding: 3rem 2rem;
+            text-align: center;
+            margin-top: 4rem;
+        }
+
+        footer p {
+            margin-bottom: 0.5rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-container {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .history-content {
+                flex-direction: column;
+            }
+
+            .comparison-table {
+                display: block;
+                overflow-x: auto;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="nav-container">
+            <div class="logo">杀生成仁</div>
+            <nav>
+                <ul>
+                    <li><a href="#concept">核心释义</a></li>
+                    <li><a href="#history">历史典故</a></li>
+                    <li><a href="#ethics">现代应用</a></li>
+                    <li><a href="#faq">常见疑问</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <h1>杀生成仁</h1>
+        <p>儒家“杀身成仁”思想的深度解析：探讨在道德抉择中，个体牺牲与精神不朽的辩证关系。</p>
+        <a href="#concept" class="cta-button">深入了解思想内涵</a>
+    </section>
+
+    <main>
+        <!-- 核心释义 -->
+        <section id="concept" class="section-title">
+            <h2>核心释义与哲学内涵</h2>
+            <div class="divider"></div>
+        </section>
+
+        <div class="concept-grid">
+            <article class="concept-card">
+                <h3>仁的至高性</h3>
+                <p>“杀生成仁”并非鼓励暴力，而是强调“仁”作为儒家道德核心的绝对优先性。在“生”与“仁”不可兼得时，选择保全“仁”的操守与精神，认为这是人的最高价值实现。</p>
+            </article>
+            <article class="concept-card">
+                <h3>身体发肤</h3>
+                <p>儒家虽讲“身体发肤，受之父母”，不轻易毁伤，但当“仁”面临考验，即危及社会道义或君主大义时，身体的毁灭便不再是损失，而是一种精神上的升华与完成。</p>
+            </article>
+            <article class="concept-card">
+                <h3>义理之勇</h3>
+                <p>这是一种理性的勇气，非匹夫之勇。它要求个体在认清局势后，为了维护正义和原则，敢于承担最坏的结果，即牺牲生命。</p>
+            </article>
+        </div>
+
+        <!-- 历史典故 -->
+        <section id="history" class="history-section">
+            <div class="history-content">
+                <div class="history-text">
+                    <h3>微子、箕子与比干：商末三仁</h3>
+                    <p>“杀生成仁”最著名的出处见于《论语·微子》。孔子评价商纣王时期的微子、箕子和比干为“三仁”。其中，比干因强谏纣王而被剖心而死，孔子认为他是真正践行了“杀身成仁”的人。</p>
+                    <p>这一典故成为了后世士大夫在面对昏君或邪恶势力时，坚守道德底线、宁死不屈的精神图腾。它确立了“义重于生”的价值取向。</p>
+                    <p>相比之下，微子选择离去（知难而退），箕子选择装疯（避祸保身），虽然也是仁，但比干的“死”最为壮烈，最能体现“成仁”的决绝。</p>
+                </div>
+                <div class="history-visual">
+                    <img src="https://picsum.photos/seed/ancient/600/400" alt="商朝历史场景示意图">
+                </div>
+            </div>
+        </section>
+
+        <!-- 价值对比 -->
+        <section class="section-title">
+            <h2>历史人物抉择对比</h2>
+            <div class="divider"></div>
+        </section>
+
+        <table class="comparison-table">
+            <thead>
+                <tr>
+                    <th>人物</th>
+                    <th>面对困境</th>
+                    <th>应对方式</th>
+                    <th>儒家评价</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>比干</strong></td>
+                    <td>纣王无道，强谏不止</td>
+                    <td>坚持直谏，最终被杀</td>
+                    <td><strong>杀身成仁</strong>（最典型）</td>
+                </tr>
+                <tr>
+                    <td><strong>微子</strong></td>
+                    <td>见纣王不可谏</td>
+                    <td>封印离去，归隐他乡</td>
+                    <td>仁（保全了自身与百姓）</td>
+                </tr>
+                <tr>
+                    <td><strong>箕子</strong></td>
+                    <td>见纣王不可谏</td>
+                    <td>披发装疯，为奴避祸</td>
+                    <td>仁（保全了名节）</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!-- 现代应用 -->
+        <section id="ethics" class="section-title" style="margin-top: 4rem;">
+            <h2>当代伦理价值与思考</h2>
+            <div class="divider"></div>
+        </section>
+
+        <div class="ethics-grid">
+            <div class="ethics-item">
+                <div class="ethics-icon">⚖️</div>
+                <h4>职业道德</h4>
+                <p>在商业或职业环境中，为了不违反法律或行业准则而放弃个人利益甚至职业生涯，可视为现代版的“成仁”。</p>
+            </div>
+            <div class="ethics-item">
+                <div class="ethics-icon">🛡️</div>
+                <h4>公共安全</h4>
+                <p>消防员、警察在危险时刻优先保护他人生命财产安全，甚至牺牲自己，是“杀身成仁”精神在现代社会最光辉的体现。</p>
+            </div>
+            <div class="ethics-item">
+                <div class="ethics-icon">🧠</div>
+                <h4>道德底线</h4>
+                <p>在涉及原则性问题上，不随波逐流，敢于对错误行为说“不”，这种精神上的坚持同样珍贵。</p>
+            </div>
+        </div>
+
+        <!-- 常见问题 -->
+        <section id="faq" class="section-title" style="margin-top: 4rem;">
+            <h2>常见疑问与辨析</h2>
+            <div class="divider"></div>
+        </section>
+
+        <div class="faq-container">
+            <details>
+                <summary>“杀身成仁”和“舍生取义”有什么区别？</summary>
+                <div class="faq-content">
+                    <p>二者在本质上是一致的，都是强调精神价值高于肉体生命。但侧重点略有不同：“杀身成仁”侧重于保全“仁”的道德境界；“舍生取义”侧重于舍弃生命以获取“义”的真理。在古代语境中，二者常混用，互为表里。</p>
+                </div>
+            </details>
+            <details>
+                <summary>儒家真的认为死比生更重要吗？</summary>
+                <div class="faq-content">
+                    <p>儒家并不轻视生命，而是强调“生”是有条件的，即必须合乎“道”与“义”。如果生命建立在违背道德的基础上，那么这种“生”是可耻的。因此，在“义”与“生”不可兼得时，必须舍生取义，这才是儒家推崇的生命观。</p>
+                </div>
+            </details>
+            <details>
+                <summary>在现代法治社会，还需要“杀身成仁”吗？</summary>
+                <div class="faq-content">
+                    <p>虽然现代法治社会强调程序正义和法律保护，但“杀身成仁”所代表的“坚守原则、勇于担当、牺牲小我”的精神内核依然具有极高的道德价值。它更多转化为一种精神信仰和职业操守的指引。</p>
+                </div>
+            </details>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 儒家文化知识专题页. 保留所有权利.</p>
+        <p>本页面旨在传播传统文化知识，弘扬正面价值观。</p>
+    </footer>
+
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</body>
+</html>
